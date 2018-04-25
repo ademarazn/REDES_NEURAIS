@@ -1,0 +1,47 @@
+// =============================================================================
+// Allan CORNET
+// Copyright DIGITEO 2010 - 2011
+// Copyright INRIA 2008
+// =============================================================================
+function ANN_toolboxlib = startModule()
+
+mprintf("Start ANN Toolbox 0.4.2.5\n");
+
+if isdef("ANN_toolboxlib") then
+    warning("ANN Toolbox 0.4.2.5 library is already loaded");
+    return;
+end
+
+etc_tlbx  = get_absolute_file_path("ANN_toolbox.start");
+etc_tlbx  = getshortpathname(etc_tlbx);
+root_tlbx = strncpy( etc_tlbx, length(etc_tlbx)-length("\etc\") );
+
+//Load  functions library
+// =============================================================================
+mprintf("\tLoad macros\n");
+pathmacros = pathconvert( root_tlbx ) + "macros" + filesep();
+ANN_toolboxlib = lib(pathmacros);
+
+// Load and add help chapter
+// =============================================================================
+if or(getscilabmode() == ["NW";"STD"]) then
+    mprintf("\tLoad help\n");
+    path_addchapter = pathconvert(root_tlbx+"/jar");
+    if ( isdir(path_addchapter) <> [] ) then
+        add_help_chapter("ANN Toolbox 0.4.2.5", path_addchapter, %F);
+    end
+end
+
+// Load demos
+// =============================================================================
+if or(getscilabmode() == ["NW";"STD"]) then
+    mprintf("\tLoad demos\n");
+    pathdemos = pathconvert(root_tlbx+"/demos/ANN.dem.gateway.sce",%F,%T);
+    add_demo("ANN Toolbox 0.4.2.5", pathdemos);
+end
+endfunction
+// =============================================================================
+ANN_toolboxlib = startModule();
+clear startModule;
+// =============================================================================
+

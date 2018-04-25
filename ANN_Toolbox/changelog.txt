@@ -1,0 +1,80 @@
+ChangeLog: ANN Toolbox --- for Scilab
+           ==========================
+
+=====================================================================
+From 0.4.2.4 -> 0.4.2.5 :
+
+- compatibility with Scilab 5.4.0
+(Allan CORNET , DIGITEO , 2011)
+=====================================================================
+From 0.4.2.3 -> 0.4.2.4 :
+
+- compatibility with Scilab 5.3.0
+(Allan CORNET , DIGITEO , 2010)
+=====================================================================
+From 0.4.2.2 -> 0.4.2.3 :
+
+- compatibility with Scilab 5.2.0
+(Allan CORNET , DIGITEO , 2009)
+=====================================================================
+From 0.4.2.1 -> 0.4.2.2 :
+
+- remove some hardcoded paths
+(Allan CORNET , DIGITEO , 2008)
+=====================================================================
+From 0.4.2 -> 0.4.2.1 :
+
+- Adjustments for Scilab 5.x
+macros and help updated
+uses standard architecture of toolboxes for scilab 5.0
+(Allan CORNET , INRIA , 2008)
+
+=====================================================================
+From 0.4.1 -> 0.4.2
+Minor adjustments for Scilab 2.6:
+- install.sh script which will install/uninstall the toolbox
+  (system-wide or in selected dir)
+- manual updates (macros change, contents unchanged)
+
+From 0.4 -> 0.4.1
+
+Minor adjustments for the new Scilab 2.5:
+  - new Makefile
+  - README updated
+
+=====================================================================
+
+From 0.3 -> 0.4
+
+Function names have been rationalized to a more suitable nomenclature.
+Discrete time loops are now performed inside training engines.
+Some algorithms added.
+
+WHAT YOU HAVE TO DO TO CONVERT YOUR OLD SCRIPTS:
+ - rename the functions according to the new nomenclature.
+ - some training engines now perform the discrete time loops inside,
+   so they require a new parameter T and external looping have to be
+   removed. Also note that the format of optional ex parameter have also
+   changed in order to acomodate this.
+
+=====================================================================
+
+From 0.2x -> 0.3
+
+This toolkit now uses hypermatrices available only on Scilab 2.4
+and upward. This will make possible to easily add future algorithms.
+Also: the patterns are now represented by column vectors and weight
+matrices are as one would expect, i.e. as they are currently used
+in main ANN literature.
+
+For these reasons scripts written for previous version(s) of this toolkit
+will not work on this one. I apologies for inconveniences. The introduction
+of hypermatrices in Scilab 2.4 will (PROBABLY) make unnecessary any other
+major changes in future versions of this toolkit (from the user's scripts
+point of view).
+
+WHAT YOU HAVE TO DO TO CONVERT YOUR OLD SCRIPTS:
+  - transpose the inputs and targets, e.g. x=x'
+    and nothing else if you don't touch the weight matrix;
+  - if you manipulated the weight matrix then convert that part to the
+    new format of W, see the man pages for details.

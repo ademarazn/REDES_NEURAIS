@@ -1,0 +1,89 @@
+Toolbox: ANN_Toolbox
+
+Title: ANN Toolbox
+
+Summary: ANN Toolbox
+
+Version: 0.4.2.5
+
+Author: Ryurick M. Hristev
+ Allan Cornet <allan.cornet@scilab.org>
+
+Maintainer: Allan Cornet <allan.cornet@scilab.org>
+
+Category: Modeling and Control Tools
+ Data Analysis And Statistics - Neural networks
+
+Entity: Private Individual
+
+WebSite: http://forge.scilab.org/index.php/p/ann-toolbox/
+
+URL: http://atoms.scilab.org/toolboxes/ANN_Toolbox/0.4.2.5
+
+License: GPL
+
+ScilabVersion: >= 5.4
+
+Depends: 
+
+Date: 2011-11-24 12:47:15
+
+Description: This represents a toolbox for artificial neural networks,
+ based on &quot;Matrix ANN&quot; book
+ 
+ Current feature:
+  - Only layered feedforward networks are supported *directly* at the moment
+    (for others use the &quot;hooks&quot; provided)
+  - Unlimited number of layers
+  - Unlimited number of neurons per each layer separately
+  - User defined activation function (defaults to logistic)
+  - User defined error function (defaults to SSE)
+  - Algorithms implemented so far:
+     * standard (vanilla) with or without bias, on-line or batch
+     * momentum with or without bias, on-line or batch
+     * SuperSAB with or without bias, on-line or batch
+     * Conjugate gradients
+     * Jacobian computation
+     * Computation of result of multiplication between &quot;vector&quot; and
+ Hessian
+  - Some helper functions provided
+ 
+ For full descriptions start with the toplevel &quot;ANN&quot; man page.
+ 
+ functions:
+ 
+ ann_FF — Algorithms for feedforward nets.
+ ann_FF_ConjugGrad — Conjugate Gradient algorithm.
+ ann_FF_Hess — computes Hessian by finite differences.
+ ann_FF_INT — internal implementation of feedforward nets.
+ ann_FF_Jacobian — computes Jacobian by finite differences.
+ ann_FF_Jacobian_BP — computes Jacobian trough backpropagation.
+ ann_FF_Mom_batch — batch backpropagation with momentum.
+ ann_FF_Mom_batch_nb — batch backpropagation with momentum (without bias).
+ ann_FF_Mom_online — online backpropagation with momentum.
+ ann_FF_Mom_online_nb — online backpropagation with momentum.
+ ann_FF_SSAB_batch — batch SuperSAB algorithm.
+ ann_FF_SSAB_batch_nb — batch SuperSAB algorithm (without bias).
+ ann_FF_SSAB_online — online SuperSAB training algorithm.
+ ann_FF_SSAB_online_nb — online backpropagation with SuperSAB
+ ann_FF_Std_batch — standard batch backpropagation.
+ ann_FF_Std_batch_nb — standard batch backpropagation (without bias).
+ ann_FF_Std_online — online standard backpropagation.
+ ann_FF_Std_online_nb — online standard backpropagation
+ ann_FF_VHess — multiplication between a &quot;vector&quot; V and Hessian
+ ann_FF_grad — error gradient trough finite differences.
+ ann_FF_grad_BP — error gradient trough backpropagation
+ ann_FF_grad_BP_nb — error gradient trough backpropagation (without bias)
+ ann_FF_grad_nb — error gradient trough finite differences
+ ann_FF_init — initialize the weight hypermatrix.
+ ann_FF_init_nb — initialize the weight hypermatrix (without bias).
+ ann_FF_run — run patterns trough a feedforward net.
+ ann_FF_run_nb — run patterns trough a feedforward net (without bias).
+ ann_d_log_activ — derivative of logistic activation function
+ ann_d_sum_of_sqr — derivative of sum-of-squares error
+ ann_log_activ — logistic activation function
+ ann_pat_shuffle — shuffles randomly patterns for an ANN
+ ann_sum_of_sqr — calculates sum-of-squares error
+ 
+ 
+

@@ -1,0 +1,19 @@
+Backpropagation
+
+ - Standard algorithm
+     encoder_nb.sce      : 4-3-4 encoder on ANN without biases
+     encoder.sce         : 4-2-4 tight encoder on ANN with biases
+
+ - Momentum
+     encoder_m_nb.sce    : 4-3-4 encoder on ANN without biases compare with encoder_nb.sce
+     encoder_m.sce       : 4-2-4 tight encoder on ANN with biases compare with encoder.sce
+     enc848_m_nb.sce     : 8-4-8 encoder on ANN without biases
+     enc838_m.sce        : 8-3-8 encoder on ANN with biases
+
+ - SuperSAB
+     enc858_ssab_nb.sce  : 8-5-8 encoder on ANN without biases
+     enc848_ssab.sce     : 8-4-8 encoder on ANN with biases
+     (Note that the more tight encoders are very difficult to train with this algorithm)
+
+ - Conjugate Gradients
+     encoder_cc.sce      : 4-2-4 tight encoder on ANN with biases uses a mixed standard/conjugate gradients method
